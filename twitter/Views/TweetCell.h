@@ -14,5 +14,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *cellImageView;
 @property (strong, nonatomic) Tweet *tweet;
-
+@property (weak, nonatomic) IBOutlet UIButton *didTapLike;
+@property (weak, nonatomic) IBOutlet UILabel *retweetLabel;
+@property (weak, nonatomic) IBOutlet UILabel *favoriteLabel;
+@property (weak, nonatomic) IBOutlet UIButton *retweetButton;
+- (void)setTweet:(Tweet *)tweet;
 @end

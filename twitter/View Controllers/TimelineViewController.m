@@ -78,9 +78,7 @@
     TweetCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TweetCell"];
     
     Tweet *tweet = self.tweets[indexPath.row];
-    cell.userNameLabel.text  = tweet.user.name;
-    NSLog(@"%@", cell.userNameLabel.text);
-    cell.tweetContentLabel.text = tweet.text;
+    [cell setTweet:tweet];
     
     // set posterView image to nil before the new image loads
     cell.cellImageView.image = nil;
