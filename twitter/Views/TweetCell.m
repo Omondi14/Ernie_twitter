@@ -38,6 +38,10 @@
     NSLog(@"%@", self.userNameLabel.text);
     self.tweetContentLabel.text = self.tweet.text;
     
+    //update date created and timestamp labels
+    self.dateCreated.text = self.tweet.createdAtString;
+    self.timeStamp.text = self.tweet.timestampString;
+    
     if (self.tweet.favorited){
         self.didTapLike.selected = YES;
     }
@@ -50,8 +54,8 @@
     else{
         self.retweetButton.selected = NO;
     }
-    self.favoriteLabel.text = [NSString stringWithFormat:@"%i", self.tweet.favoriteCount];
-    self.retweetLabel.text = [NSString stringWithFormat:@"%i", self.tweet.retweetCount];
+    [self.didTapLike setTitle:[NSString stringWithFormat:@"%d", self.tweet.favoriteCount] forState:UIControlStateNormal];
+    [self.retweetButton setTitle:[NSString stringWithFormat:@"%d", self.tweet.retweetCount] forState:UIControlStateNormal];
 
 }
 

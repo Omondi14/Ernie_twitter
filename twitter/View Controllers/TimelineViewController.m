@@ -47,13 +47,6 @@
     [[APIManager shared] getHomeTimelineWithCompletion:^(NSArray *tweetsFromAPI, NSError *error) {
         if (tweetsFromAPI) {
             NSLog(@"😎😎😎 Successfully loaded home timeline");
-            for (NSDictionary *dictionary in tweetsFromAPI) {
-                NSLog(@"%@", dictionary);
-                //                NSString *text = dictionary[@"text"];
-                //                NSLog(@"%@", text);
-                // stores the array of movie objects from the JSON above
-                
-            }
             
             self.tweets = (NSMutableArray *)tweetsFromAPI;
             
